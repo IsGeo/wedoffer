@@ -81,7 +81,8 @@
                 <div class="title m-b-md">
                     Hello world!
                 </div>
-
+                {{ $village->name }}
+                {{ $village->description }}
 
             </div>
         </div>

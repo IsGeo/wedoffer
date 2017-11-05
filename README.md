@@ -13,5 +13,5 @@
 - [Database schema](https://dbdesigner.net/designer/schema/124062).
 - [Laravel video](https://www.youtube.com/watch?v=nWo5vHkOyBk&list=PL9ogRqeIEMzntnGiOj0tHu0o2ldxWWtJR&index=1).
 
-composer install
-php artisan migrate:refresh --seed
+composer install     <br>
+php artisan migrate:refresh --seed <br>

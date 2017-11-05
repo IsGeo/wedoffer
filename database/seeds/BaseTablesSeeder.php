@@ -11,43 +11,43 @@ class BaseTablesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('village')->insert([
+        DB::table('villages')->insert([
            'name' => 'Подобовец',
-           'desription' => str_random(100),
+           'description' => 'I\'m awesome',
        ]);
 
-       DB::table('hotel')->insert([
+       DB::table('hotels')->insert([
            'name' => 'Сказка Карпат',
            'host' => 'Василь',
            'village_id' => 1,
-           'desription' => str_random(100),
+           'description' => str_random(100),
        ],
        [
            'name' => 'Под Гимбой',
            'host' => 'Оксана',
            'village_id' => 1,
-           'desription' => str_random(100),
+           'description' => str_random(100),
        ],
        [
            'name' => 'Под Веселим Дахом',
            'host' => 'Марина',
            'village_id' => 1,
-           'desription' => str_random(100),
+           'description' => str_random(100),
        ]);
 
 
-       DB::table('apartment')->insert([
-           'desription' => str_random(50),
+       DB::table('apartments')->insert([
+           'description' => str_random(50),
            'status' => 1,
            'hotel_id' => 1,
        ],
        [
-           'desription' => str_random(50),
+           'description' => str_random(50),
            'status' => 2,
            'hotel_id' => 1,
        ],
        [
-           'desription' => str_random(50),
+           'description' => str_random(50),
            'status' => 2,
            'hotel_id' => 2,
        ]);
@@ -59,14 +59,14 @@ class BaseTablesSeeder extends Seeder
            'password' => bcrypt('secret'),
        ]);
 
-       DB::table('customer')->insert([
+       DB::table('customers')->insert([
            'name' => str_random(10),
            'surname' => str_random(10),
            'email' => str_random(10).'@gmail.com',
            'phone' => str_random('secret'),
        ]);
 
-       DB::table('customer_to_apartment')->insert([
+       DB::table('customers_to_apartments')->insert([
            'customer_id' => 1,
            'apartment_id' => 1,
        ]);

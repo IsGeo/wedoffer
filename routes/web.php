@@ -10,9 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'VillageController@index');
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -20,7 +18,7 @@ Route::get('/welcome', function () {
 
 Route::group(['prefix' => 'admin'], function () {
 // First Route
-    Route::get('/', 'AdminController@index')->name('/');
+    Route::get('/', 'Admin\AdminController@index')->name('/');
 });
 
 Auth::routes();

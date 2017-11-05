@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCustomerToApartmentTable extends Migration
+class CreateApartmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateCustomerToApartmentTable extends Migration
      */
     public function up()
     {
-        Schema::create('customer_to_apartment', function (Blueprint $table) {
-            $table->integer('customer_id');
-            $table->integer('apartment_id');
+        Schema::create('apartments', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('hotel_id');
+            $table->string('description');
+            $table->integer('status');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +29,6 @@ class CreateCustomerToApartmentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customer_to_apartment');
+        Schema::dropIfExists('apartments');
     }
 }
