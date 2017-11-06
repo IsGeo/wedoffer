@@ -1,0 +1,19 @@
+{"menus":[
+    {"section":"User Manager","items":
+        [
+            {"title":"Users","url":"\/admin\/users"},
+            {"title":"Roles","url":"\/admin\/roles"},
+            {"title":"Permissions","url":"\/admin\/permissions"}
+        ]},
+    {"section":"Database","items":
+        [
+            {"title":"Projects","url":"#"}
+        ]},
+    {"section":"Accommodation","items":
+        [
+            {"title":"Villages","url":"#"},
+            {"title":"Hotels","url":"#"},
+            {"title":"Apartments","url":"#"},
+            {"title":"Customers","url":"#"}
+        ]}
+]}

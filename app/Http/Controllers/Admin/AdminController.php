@@ -4,27 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Admin\Admin;
 
 class AdminController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * Display a listing of the resource.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return view('admin');
+        return view('admin.dashboard');
     }
 }

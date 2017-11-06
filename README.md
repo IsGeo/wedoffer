@@ -15,3 +15,9 @@
 
 composer install     <br>
 php artisan migrate:refresh --seed <br>
+
+<br><br>
+
+# А правда:
+
+- откуда берется адрес на menus.json

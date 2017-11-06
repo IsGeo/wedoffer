@@ -10,15 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'VillageController@index');
+Auth::routes();
+
+Route::get('/', 'HomeController@index');
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 // First Route
     Route::get('/', 'Admin\AdminController@index')->name('/');
+    Route::resource('roles', 'Admin\RolesController');
+    Route::resource('permissions', 'Admin\PermissionsController');
+    Route::resource('users', 'Admin\UsersController');
 });
 
-Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
